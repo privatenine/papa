@@ -13,6 +13,16 @@ export default new Router({
       path: '/pageFirst',
       component: (resolve) => require(['@/views/pageFirst'], resolve),
       hidden: true
+    },
+    {
+      path: '/pageSecond',
+      component: (resolve) => require(['@/views/pageSecond'], resolve),
+      hidden: true
+    },
+    {
+      path: '/pageThird',
+      component: (resolve) => require(['@/views/pageThird'], resolve),
+      hidden: true
     }
   ]
 })

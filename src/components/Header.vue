@@ -1,7 +1,7 @@
 <template>
   <div class="head">
-    <!-- <img src="@/assets/logo.png" height="60" alt="papa"> -->
-    <span v-if="userInfo">{{ userInfo }}</span>
+    <img src="@/assets/logo.png" height="60" alt="papa">
+    <span v-if="userName">{{ userName }}</span>
     <el-button v-else type="success" round @click="login">登录</el-button>
   </div>
 </template>
@@ -11,11 +11,12 @@
 export default {
   data() {
     return {
-      userInfo: null
     }
   },
-  mounted() {
-    this.userInfo = this.$store.getters.userInfo
+  computed: {
+    userName() {
+      return this.$store.getters.userInfo.name
+    }
   },
   methods: {
     login() {
@@ -31,5 +32,6 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #EBEBEF;
+  margin-bottom: 20px;
 }
 </style>

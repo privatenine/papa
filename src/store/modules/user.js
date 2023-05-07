@@ -9,7 +9,7 @@ const user = {
   },
   actions: {
     Login({ commit }) {
-      commit('SET_USERINFO', '学员1')
+      commit('SET_USERINFO', { name: '学员1' })
     }
   }
 }
